@@ -42,7 +42,7 @@ const web = ["React", "TypeScript", "Tailwind CSS"];
 
 function screenshots(extension: "jpg" | "png", descriptions: string[]) {
   return descriptions.map((alt, index) => ({
-    file: `screenshot-${String(index + 1).padStart(2, '0')}.${extension}`,
+    file: `screenshot-${String(index + 1).padStart(2, "0")}.${extension}`,
     alt,
   }));
 }
@@ -78,7 +78,10 @@ export const projects: Project[] = [
     category: "Data Automation",
     organization: bank,
     visual: "pipeline",
-    flow: { label: "Workbook workflow", steps: ["Branch workbooks", "Shared Excel workbook", "Area recap"] },
+    flow: {
+      label: "Workbook workflow",
+      steps: ["Branch workbooks", "Shared Excel workbook", "Area recap"],
+    },
     summary:
       "An Excel workbook on OneDrive that consolidates branch pipeline data into a single area recap.",
     contribution:
@@ -122,7 +125,10 @@ export const projects: Project[] = [
     category: "Data Automation",
     organization: bank,
     visual: "dashboard",
-    flow: { label: "Dashboard workflow", steps: ["Google Sheets", "Apps Script processing", "Priority dashboard"] },
+    flow: {
+      label: "Dashboard workflow",
+      steps: ["Google Sheets", "Apps Script processing", "Priority dashboard"],
+    },
     summary:
       "A web dashboard for monitoring Priority Banking performance and reviewing customer portfolio data.",
     contribution:
@@ -139,7 +145,11 @@ export const projects: Project[] = [
     organization: studio,
     period: "Apr–May 2025",
     preview: { desktop: 1, phones: [3], tone: "moss" },
-    screenshots: screenshots("jpg", ["Meow Quest desktop landing page", "Interactive game preview modal", "Meow Quest mobile landing page"]),
+    screenshots: screenshots("jpg", [
+      "Meow Quest desktop landing page",
+      "Interactive game preview modal",
+      "Meow Quest mobile landing page",
+    ]),
     summary: "An animated landing page introducing a game concept.",
     contribution:
       "I built the landing page from scratch in React and TypeScript. I created responsive layouts, implemented interactive animations and modal behavior, and placed calls to action along the visitor’s path through the page. I refined the component structure and animation performance to keep the experience smooth across screen sizes.",
@@ -153,7 +163,10 @@ export const projects: Project[] = [
     organization: studio,
     period: "May–Jun 2025",
     preview: { desktop: 2, phones: [1], tone: "sand" },
-    screenshots: screenshots("jpg", ["Wordcraft mobile landing page", "Wordcraft desktop landing page with demo video"]),
+    screenshots: screenshots("jpg", [
+      "Wordcraft mobile landing page",
+      "Wordcraft desktop landing page with demo video",
+    ]),
     summary:
       "A landing page for a word game with a looping background, an embedded demo video, and a link to the playable game.",
     contribution:
@@ -164,7 +177,10 @@ export const projects: Project[] = [
     slug: "monitoring-atm",
     title: "Monitoring ATM",
     type: "ATM Monitoring & Reporting",
-    flow: { label: "Import workflow", steps: ["Raw ATM file", "Drag-and-drop import", "Dashboard summary"] },
+    flow: {
+      label: "Import workflow",
+      steps: ["Raw ATM file", "Drag-and-drop import", "Dashboard summary"],
+    },
     category: "Data Automation",
     organization: bank,
     summary:
@@ -179,7 +195,10 @@ export const projects: Project[] = [
     slug: "daily-activity-ftr",
     title: "Rekap Daily Activity FTR",
     type: "Daily Activity Recap Tool",
-    flow: { label: "Daily reporting workflow", steps: ["Activity entries", "Shared workbook", "Daily FTR recap"] },
+    flow: {
+      label: "Daily reporting workflow",
+      steps: ["Activity entries", "Shared workbook", "Daily FTR recap"],
+    },
     category: "Data Automation",
     organization: bank,
     summary:
@@ -240,7 +259,10 @@ export const projects: Project[] = [
     slug: "adhom",
     title: "Adhom Sales Analytics",
     preview: { desktop: 1, tone: "teal" },
-    screenshots: screenshots("jpg", ["Sales dashboard with a comparison chart", "Financial summary view"]),
+    screenshots: screenshots("jpg", [
+      "Sales dashboard with a comparison chart",
+      "Financial summary view",
+    ]),
     type: "Sales Analytics Web App",
     category: "Frontend",
     organization: tarkiz,
@@ -305,7 +327,11 @@ export const projects: Project[] = [
     slug: "hola-pulsa",
     title: "Hola Pulsa Platform",
     type: "Academy Team Project",
-    flow: { label: "Product categories", steps: ["Airtime", "Electricity tokens", "Digital products"], sequence: false },
+    flow: {
+      label: "Product categories",
+      steps: ["Airtime", "Electricity tokens", "Digital products"],
+      sequence: false,
+    },
     category: "Frontend",
     organization: "Alterra Academy",
     period: "Nov–Dec 2022",
@@ -425,6 +451,7 @@ export const about = {
   certifications: [
     "Responsive Web Design · freeCodeCamp, 2023",
     "English Proficiency Test (EPT) · Universitas Lambung Mangkurat, 2023",
+    "TOEFL ITP· Yureca Education Center, 2026",
     "React JS Front-End Engineer · Alterra Academy, 2022",
     "Microsoft Office Specialist (PowerPoint) · Certiport, 2020",
   ],
